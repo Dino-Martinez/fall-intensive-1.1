@@ -1,0 +1,111 @@
+:root {
+    --background-dark: #333;
+    --foreground-dark: #222;
+    --background-light: #ddd;
+    --foreground-light: #eee;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin:0;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    width:100%;
+    position:sticky;
+    top:0;
+    display: flex;
+    justify-content: space-around;
+    background:var(--background-dark);
+    color:var(--foreground-light);
+}
+
+nav > a {
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s ease;
+}
+
+nav > a:hover {
+    background: #000;
+}
+
+section {
+    width:75%;
+    margin-top:24px;
+    margin-bottom: 24px;
+    background: var(--background-light);
+    padding:8px;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tutors-list {
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#tutors-list > a {
+    text-decoration: none;
+    color: var(--foreground-dark);
+    border: 1px solid var(--foreground-dark);
+    border-radius: 5px;
+    width:100%;
+    padding:8px;
+    margin-bottom:12px;
+    transition: all .2s ease;
+}
+
+#tutors-list > a:hover {
+    background: var(--background-dark);
+    color: var(--foreground-light);
+}
+.link-list {
+    width:fit-content;
+}
+.vertical-separator {
+    display:inline-block;
+    width:0;
+    margin-bottom:-3px;
+    height:16px;
+    border-right: 2px solid var(--background-dark);
+    margin-left:3px;
+}
+.text-content {
+    width:75%;
+}
+.nav-grid {
+    width:50%;
+    height:auto;
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+}
+.nav-grid > a {
+    height:100px;
+    width:150px;
+    margin-bottom:36px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--foreground-dark);
+    border-radius: 5px;
+    color: var(--foreground-dark);
+    background: var(--foreground-light);
+    transition: all .2s ease;
+}
+.nav-grid > a:hover {
+    border: 1px solid var(--background-light);
+    background: var(--foreground-dark);
+    color:var(--foreground-light);
+}

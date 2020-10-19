@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    {{name}} - {{age}}: Tutors {{subject}} at the {{level}} level.
+    <a href='/remove_tutor/{{_id}}'>Fire this tutor.</a>
+</section>
+{% endblock %}

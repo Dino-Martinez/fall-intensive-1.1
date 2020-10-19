@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <form method="POST">
+        <label for='name'>Name:</label>
+        <input type='text' name='name'>
+
+        <label for='age'>Age:</label>
+        <input type='number' name='age'>
+
+        <label for='subject'>Subject:</label>
+        <input type='text' name='subject'>
+
+        <label for='level'>Grade Level:</label>
+        <input type='text' name='level'>
+
+        <label for='virtual'>Virtual Delivery:</label>
+        <input type='checkbox' name='virtual'>
+
+        <label for='in-person'>In Person Delivery:</label>
+        <input type='checkbox' name='in-person'>
+
+        <input type='submit' value='Submit'>
+    </form>
+</section>
+{% endblock %}

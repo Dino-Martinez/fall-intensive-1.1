@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <div id="tutors-list" class="link-list">
+    <form>
+        <select name="field-one">
+            <option name='name'>Name</option>
+            <option name='subject'>Subject</option>
+        </select>
+        <input type="submit" value="Submit">
+        <br><br>
+        <input type="radio" id="ascending" name="sort-order" value="ascending">
+        <label for="ascending">Ascending</label>
+        <div class="vertical-separator"></div>
+        <input type="radio" id="descening" name="sort-order" value="descending">
+        <label for="descending">Descending</label>
+    </form>
+        {% for tutor in tutors %}
+            <a href='/tutors/{{tutor._id}}'>{{tutor.name}} - {{tutor.age}}: <br>Tutors {{tutor.subject}} at the {{tutor.level}} level. 
+                {% if tutor.in_person %}<br>Offers in person help. {% endif %}
+                {% if tutor.virtual %}<br>Offers virtual help. {% endif %}
+            </a>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
